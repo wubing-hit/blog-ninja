@@ -10,7 +10,7 @@ const app = express();
 const dbURI = "mongodb+srv://admin-kapil:Kapil2408@cluster0.msrwt.mongodb.net/blog-ninjaDB";
 
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(result => app.listen(3000))
+  .then(result => app.listen(process.env.PORT || 3000))
   .catch(err => console.log(err));
 
 // register view engine
